@@ -1,0 +1,91 @@
+---
+import { t, homePath, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t(lang);
+const site = Astro.site!;
+const canonical = new URL(homePath(lang), site).href;
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Victor Galletti',
+  url: site.href,
+  jobTitle: lang === 'pt' ? 'Desenvolvedor de software' : 'Software developer',
+  address: { '@type': 'PostalAddress', addressLocality: 'Brasília', addressCountry: 'BR' },
+  sameAs: ['https://github.com/victorgalletti'],
+  knowsAbout: ['Rust', 'Swift', 'SwiftUI', 'Tauri', 'Next.js', 'AI agents'],
+};
+---
+
+<!doctype html>
+<html lang={lang === 'pt' ? 'pt-BR' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#121213" />
+    <title>{tr('meta.title')}</title>
+    <meta name="description" content={tr('meta.description')} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="pt-BR" href={new URL('/', site).href} />
+    <link rel="alternate" hreflang="en" href={new URL('/en/', site).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/', site).href} />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={tr('meta.title')} />
+    <meta property="og:description" content={tr('meta.description')} />
+    <meta property="og:url" content={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #121213;
+    --g100: #131111;
+    --g200: #1b1b1b;
+    --g300: #222222;
+    --g400: #2c2c2c;
+    --g500: #474747;
+    --g600: #888888;
+    --g700: #ababab;
+    --text: #e8e8e8;
+    --brand: #ff2a36;
+    --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', Inter, system-ui, sans-serif;
+    --mono: 'SF Mono', ui-monospace, Menlo, monospace;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  a {
+    color: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+</style>
