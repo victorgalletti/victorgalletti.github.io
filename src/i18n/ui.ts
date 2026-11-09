@@ -3,35 +3,37 @@ export type Lang = keyof typeof languages;
 
 export const ui = {
   pt: {
-    'meta.title': 'Victor Galletti · apps nativos com IA',
+    'meta.title': 'Victor Galletti · desenvolvedor que resolve problemas com IA',
     'meta.description':
-      'Portfolio de Victor Galletti: apps nativos para Mac, iPhone e WhatsApp em Rust e Swift, construídos com agentes de IA.',
+      'Victor Galletti, desenvolvedor em Brasília. Uso agentes de IA para desenvolver software e resolver problemas, de apps nativos em Rust e Swift a integrações com o WhatsApp.',
     'hero.kicker': 'Victor Galletti · Brasília',
-    'hero.title': 'Apps nativos de verdade, feitos com IA.',
+    'hero.title': 'Resolvo problemas com software e IA.',
     'hero.lead':
-      'Construo apps para Mac, iPhone e WhatsApp em Rust e Swift, com agentes de IA no fluxo do começo ao fim.',
+      'Sou desenvolvedor em Brasília. A IA está no meu dia a dia: é com ela que eu aprendo, investigo, desenvolvo e coloco no ar.',
     'hero.cta': 'Ver projetos',
     'projects.title': 'Projetos',
     'projects.video': 'Vídeo em breve',
     'project.repo': 'Código',
-    'project.watch': 'Assistir',
+    'carousel.prev': 'Projeto anterior',
+    'carousel.next': 'Próximo projeto',
     'project.private': 'Código privado',
     'footer.contact': 'Fale comigo',
     'footer.building': 'Site em construção: os vídeos dos projetos estão chegando.',
   },
   en: {
-    'meta.title': 'Victor Galletti · native apps built with AI',
+    'meta.title': 'Victor Galletti · a developer who solves problems with AI',
     'meta.description':
-      "Victor Galletti's portfolio: native apps for Mac, iPhone and WhatsApp in Rust and Swift, built with AI agents.",
+      'Victor Galletti, a developer in Brasília, Brazil. I use AI agents to build software and solve problems, from native apps in Rust and Swift to WhatsApp integrations.',
     'hero.kicker': 'Victor Galletti · Brasília, Brazil',
-    'hero.title': 'Real native apps, built with AI.',
+    'hero.title': 'I solve problems with software and AI.',
     'hero.lead':
-      'I build apps for Mac, iPhone and WhatsApp in Rust and Swift, with AI agents in the loop from start to finish.',
+      "I'm a developer in Brasília, Brazil. AI is part of my everyday work: it's how I learn, investigate, build and ship.",
     'hero.cta': 'See projects',
     'projects.title': 'Projects',
     'projects.video': 'Video coming soon',
     'project.repo': 'Code',
-    'project.watch': 'Watch',
+    'carousel.prev': 'Previous project',
+    'carousel.next': 'Next project',
     'project.private': 'Private code',
     'footer.contact': 'Get in touch',
     'footer.building': 'Site under construction: project videos are on the way.',

@@ -64,15 +64,4 @@ export const projects: Project[] = [
       en: 'Calculates the final landed cost of imports in BRL, with a purchase log, per-item refunds and per-person amounts. Native Mac app and web app on the same database.',
     },
   },
-  {
-    slug: 'side-quest-stories',
-    name: 'Side Quest Stories',
-    color: '#b39ddb',
-    stack: ['AI', 'SVG', 'ffmpeg', 'Whisper'],
-    watch: 'https://youtu.be/lxiAWSQlyJE',
-    summary: {
-      pt: 'Canal de vídeos animados feitos com IA, com um pipeline próprio do roteiro ao vídeo final: fundos, personagens em SVG, música, efeitos e legendas.',
-      en: 'Animated video channel made with AI, with an in-house pipeline from script to final cut: backgrounds, SVG characters, music, sound effects and captions.',
-    },
-  },
 ];

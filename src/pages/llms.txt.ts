@@ -6,7 +6,7 @@ export const GET: APIRoute = ({ site }) => {
   const lines = [
     '# Victor Galletti',
     '',
-    '> Software developer in Brasília, Brazil. Builds native apps for Mac, iPhone and WhatsApp in Rust and Swift, with AI agents in the workflow.',
+    '> Software developer in Brasília, Brazil. Uses AI agents every day to learn, investigate, build and ship software: native apps in Rust and Swift, web apps and WhatsApp integrations.',
     '',
     `Site: ${base}/ (Portuguese) · ${base}/en/ (English)`,
     'GitHub: https://github.com/victorgalletti',
